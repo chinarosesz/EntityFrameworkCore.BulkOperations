@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PackageId>EntityFrameworkCore.BulkOperations</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Lila Tran</Authors>
+    <Company>https://github.com/chinarosesz/EntityFrameworkCore.BulkOperations</Company>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/chinarosesz/EntityFrameworkCore.BulkOperations</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
