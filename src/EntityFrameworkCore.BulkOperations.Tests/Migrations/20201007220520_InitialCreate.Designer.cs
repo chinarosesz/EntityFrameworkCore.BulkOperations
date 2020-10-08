@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EntityFrameworkCore.BulkOperations.Tests.Migrations
 {
     [DbContext(typeof(EmployeeDbContext))]
-    [Migration("20200910185425_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20201007220520_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,20 +21,7 @@ namespace EntityFrameworkCore.BulkOperations.Tests.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("EntityFramework.BulkOperations.Tests.EmployeeDataEntity", b =>
-                {
-                    b.Property<string>("EmployeeId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Data")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("EmployeeId");
-
-                    b.ToTable("EmployeeData");
-                });
-
-            modelBuilder.Entity("EntityFramework.BulkOperations.Tests.EmployeeEntity", b =>
+            modelBuilder.Entity("EntityFrameworkCore.BulkOperations.Tests.EmployeeEntity", b =>
                 {
                     b.Property<string>("EmployeeId")
                         .HasColumnType("nvarchar(450)");
@@ -71,7 +58,7 @@ namespace EntityFrameworkCore.BulkOperations.Tests.Migrations
                     b.ToTable("Employee");
                 });
 
-            modelBuilder.Entity("EntityFramework.BulkOperations.Tests.EmployeeWithCompressedDataEntity", b =>
+            modelBuilder.Entity("EntityFrameworkCore.BulkOperations.Tests.EmployeeWithCompressedDataEntity", b =>
                 {
                     b.Property<string>("EmployeeId")
                         .HasColumnType("nvarchar(450)");
@@ -111,7 +98,7 @@ namespace EntityFrameworkCore.BulkOperations.Tests.Migrations
                     b.ToTable("EmployeeWithCompressedData");
                 });
 
-            modelBuilder.Entity("EntityFramework.BulkOperations.Tests.EmployeeWithDataEntity", b =>
+            modelBuilder.Entity("EntityFrameworkCore.BulkOperations.Tests.EmployeeWithDataEntity", b =>
                 {
                     b.Property<string>("EmployeeId")
                         .HasColumnType("nvarchar(450)");

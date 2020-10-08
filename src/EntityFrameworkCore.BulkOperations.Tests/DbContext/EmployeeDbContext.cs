@@ -10,7 +10,6 @@ namespace EntityFrameworkCore.BulkOperations.Tests
         private readonly ILogger logger;
 
         public DbSet<EmployeeEntity> EmployeeEntities { get; set; }
-        public DbSet<EmployeeDataEntity> EmployeeDataEntities { get; set; }
         public DbSet<EmployeeWithDataEntity> EmployeeWithDataEntities { get; set; }
         public DbSet<EmployeeWithCompressedDataEntity> EmployeeWithCompressedDataEntities { get; set; }
 

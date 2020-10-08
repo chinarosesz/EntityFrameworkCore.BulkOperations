@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace EntityFrameworkCore.BulkOperations.Tests.Migrations
 {
-    public partial class InitialMigration : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -25,18 +25,6 @@ namespace EntityFrameworkCore.BulkOperations.Tests.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Employee", x => x.EmployeeId);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "EmployeeData",
-                columns: table => new
-                {
-                    EmployeeId = table.Column<string>(nullable: false),
-                    Data = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_EmployeeData", x => x.EmployeeId);
                 });
 
             migrationBuilder.CreateTable(
@@ -86,9 +74,6 @@ namespace EntityFrameworkCore.BulkOperations.Tests.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Employee");
-
-            migrationBuilder.DropTable(
-                name: "EmployeeData");
 
             migrationBuilder.DropTable(
                 name: "EmployeeWithCompressedData");
